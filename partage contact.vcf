@@ -1,0 +1,30 @@
+<script>
+async function shareVCard() {
+    let vcardData = `BEGIN:VCARD
+VERSION:3.0
+FN:Ismail Yurtsever
+ORG:Entreprise ISM21
+TEL;TYPE=work,voice:+3371193158
+EMAIL:is21@gmail.com
+ADR:;;2T Rue du Village;Aiserey;;21110;France
+END:VCARD`;
+
+    let blob = new Blob([vcardData], { type: "text/vcard" });
+    let file = new File([blob], "contact.vcf", { type: "text/vcard" });
+
+    if (navigator.canShare && navigator.canShare({ files: [file] })) {
+        try {
+            await navigator.share({
+                title: "Contact ISM21",
+                text: "Ajoutez le contact d'Ismail Yurtsever",
+                files: [file]
+            });
+        } catch (error) {
+            console.error("Partage annulé ou échoué", error);
+        }
+    } else {
+        alert("Le partage de fichiers n'est pas supporté sur ce navigateur.");
+    }
+}
+</script>
+
