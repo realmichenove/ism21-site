@@ -25,7 +25,7 @@
                 <div class="bg-white-500 p-2 rounded-full text-white">
                     📞
                 </div>
-                <a href="tel:+33671193158" class="text-blue-500">06.71.19.31.58
+                <a href="tel:+33671193158/" class="text-blue-500">06.71.19.31.58
 </a>
             </div>
             <div class="flex items-center space-x-4">
@@ -57,8 +57,16 @@
         
         <div class="p-4 text-center">
             
-            <button class="w-full bg-green-500 text-white py-2 rounded-lg mt-2">Enregistrer le contact</button>
-            <button class="w-full bg-gray-300 text-gray-800 py-2 rounded-lg mt-2">Partager</button>
+            <a href="contact.vcf" download="contact.vcf">
+                <button class="w-full bg-green-500 text-white py-2 rounded-lg mt-2">
+                    Enregistrer le contact
+                </button>
+            </a>
+            
+            <button class="w-full bg-gray-300 text-gray-800 py-2 rounded-lg mt-2" onclick="shareVCard()">
+                Partager
+            </button>
+            
             
         </div>
         
