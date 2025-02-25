@@ -5,4 +5,5 @@ ORG:Entreprise ISM21
 TEL;TYPE=work,voice:+3371193158
 EMAIL:entreprise.ism21@gmail.com
 ADR:;;2T Rue du Village;Aiserey;;21110;France
+PHOTO;TYPE=JPEG:https://realmichenove.github.io/ism21-site/logo.jpg
 END:VCARD
